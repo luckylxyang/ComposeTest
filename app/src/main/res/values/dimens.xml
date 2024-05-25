@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 小字体 -->
+    <dimen name="font_small">10sp</dimen>
+    <dimen name="font_small_medium">14sp</dimen>
+    <dimen name="font_small_large">18sp</dimen>
+
+    <!-- 中等字体 -->
+    <dimen name="font_medium">12sp</dimen>
+    <dimen name="font_medium_medium">16sp</dimen>
+    <dimen name="font_medium_large">20sp</dimen>
+
+    <!-- 大字体 -->
+    <dimen name="font_large">14sp</dimen>
+    <dimen name="font_large_medium">18sp</dimen>
+    <dimen name="font_large_large">22sp</dimen>
+</resources>

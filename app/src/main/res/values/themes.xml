@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.ComposeTest" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.AppTest" parent="Theme.AppCompat.Light.NoActionBar" />
+
+
+    <style name="Theme.SmallFont" parent="Theme.AppTest">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Theme.MediumFont" parent="Theme.AppTest">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Theme.LargeFont" parent="Theme.AppTest">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+</resources>
