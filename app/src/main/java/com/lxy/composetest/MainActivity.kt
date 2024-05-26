@@ -53,13 +53,17 @@ fun Index(
     modifier: Modifier = Modifier,
     navController: NavHostController
 ){
-    Column(modifier = modifier.fillMaxSize()) {
+    Column(modifier = modifier.fillMaxSize().padding(start = 12.dp)) {
         Text(text = "列表", modifier = Modifier.clickable {
             navController.navigate("list")
         })
         Spacer(modifier = Modifier.padding(12.dp))
         Text(text = "列表拖拽", modifier = Modifier.clickable {
             navController.navigate("listDrag")
+        })
+        Spacer(modifier = Modifier.padding(12.dp))
+        Text(text = "主题切换", modifier = Modifier.clickable {
+            navController.navigate("DynamicThemeScreenPage")
         })
     }
 }

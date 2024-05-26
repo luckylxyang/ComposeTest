@@ -8,6 +8,7 @@ import androidx.navigation.compose.rememberNavController
 import com.lxy.composetest.Index
 import com.lxy.composetest.list.LazyColumnDragAndDropDemo
 import com.lxy.composetest.list.ListScreenPage
+import com.lxy.composetest.theme.DynamicThemeScreenPage
 
 @Composable
 fun ComposeNaviGraph(
@@ -25,6 +26,9 @@ fun ComposeNaviGraph(
         }
         composable("listDrag"){
             LazyColumnDragAndDropDemo()
+        }
+        composable("DynamicThemeScreenPage"){
+            DynamicThemeScreenPage(navController = navController)
         }
 
     }

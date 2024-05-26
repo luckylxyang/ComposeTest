@@ -46,7 +46,7 @@ import kotlinx.coroutines.launch
 @Preview
 @Composable
 fun LazyColumnDragAndDropDemo() {
-    var list by remember { mutableStateOf(List(10) { it }) }
+    var list by remember { mutableStateOf(List(20) { it }) }
 
     val listState = rememberLazyListState()
     val dragDropState = rememberDragDropState(listState) { fromIndex, toIndex ->
