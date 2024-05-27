@@ -12,6 +12,13 @@ data class ThemeUIState(
 )
 class ThemeViewModel : ViewModel() {
 
+    private val _theme = MutableStateFlow("")
+    val theme : StateFlow<String> = _theme
+
+    fun setTheme(boolean: String){
+        _theme.update { boolean }
+    }
+
     private val _uiState = MutableStateFlow(listOf<ThemeEntity>())
 
     val uiState : StateFlow<List<ThemeEntity>> = _uiState

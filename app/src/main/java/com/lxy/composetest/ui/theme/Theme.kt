@@ -3,6 +3,7 @@ package com.lxy.composetest.ui.theme
 import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
@@ -15,6 +16,18 @@ private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
     secondary = PurpleGrey80,
     tertiary = Pink80
+)
+
+private val RedColorScheme = darkColorScheme(
+    primary = Purple80,
+    secondary = PurpleGrey80,
+    tertiary = Pink80
+)
+
+private val YellowColorScheme = darkColorScheme(
+    primary = Yellow80,
+    secondary = YellowGrey80,
+    tertiary = YellowPink80
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -52,6 +65,27 @@ fun ComposeTestTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
+        typography = Typography,
+        content = content
+    )
+}
+
+@Composable
+fun ComposeTestTheme(
+    label : String,
+    content: @Composable () -> Unit
+) {
+    // 根据状态选择主题
+    val colors = when(label){
+        "red" -> RedColorScheme
+        "yellow" -> YellowColorScheme
+        "dark" -> DarkColorScheme
+        else -> {
+            LightColorScheme
+        }
+    }
+    MaterialTheme(
+        colorScheme = colors,
         typography = Typography,
         content = content
     )

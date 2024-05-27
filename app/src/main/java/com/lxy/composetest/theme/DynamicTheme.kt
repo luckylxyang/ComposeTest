@@ -51,6 +51,7 @@ fun DynamicThemeScreenPage(
                 items(uiState.size){index->
                     ThemeItem(item = uiState[index], onChooseSelect = {select->
                         mViewModel.updateChoose(index, select)
+                        mViewModel.setTheme(uiState[index].label)
                     })
                 }
             }
@@ -59,7 +60,7 @@ fun DynamicThemeScreenPage(
 }
 
 @Composable
-fun ThemeItem(
+private fun ThemeItem(
     item: ThemeEntity,
     onChooseSelect : (Boolean)->Unit,
     modifier: Modifier = Modifier

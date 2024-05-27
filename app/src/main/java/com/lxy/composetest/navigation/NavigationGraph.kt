@@ -9,11 +9,12 @@ import com.lxy.composetest.Index
 import com.lxy.composetest.list.LazyColumnDragAndDropDemo
 import com.lxy.composetest.list.ListScreenPage
 import com.lxy.composetest.theme.DynamicThemeScreenPage
+import com.lxy.composetest.theme.ThemeViewModel
 
 @Composable
 fun ComposeNaviGraph(
     navController: NavHostController = rememberNavController(),
-
+    mViewModel: ThemeViewModel
 ){
 
     NavHost(navController = navController, startDestination = "profile") {
@@ -28,7 +29,7 @@ fun ComposeNaviGraph(
             LazyColumnDragAndDropDemo()
         }
         composable("DynamicThemeScreenPage"){
-            DynamicThemeScreenPage(navController = navController)
+            DynamicThemeScreenPage(navController = navController, mViewModel)
         }
 
     }
